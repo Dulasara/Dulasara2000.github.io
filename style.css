@@ -70,6 +70,18 @@ snip1143 {
   .snip1143 .current a {
     transform: translateY(-100%);
 }
+@media screen and (max-width:600px){
+    header{
+      font-size: 90%;
+      padding: 0px;
+      overflow: scroll;
+    }
+    header ul li a {
+      font-size: 2em;
+      padding: 0px;
+      border: none;
+    }
+}
   body {
       height: 90vh;
       display: flex;
