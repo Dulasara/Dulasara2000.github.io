@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tickets</title>
+
+    <link rel="stylesheet" href="Ticketbook.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr@4.6.9/dist/flatpickr.min.css">
+</head>
+    <img src="Logo.png" class="logo">
+    <header class="header">
+      <ul class="snip1143">
+        <li><a href="index.html" data-hover="Home">Home</a></li>
+        <li><a href="catagory.html" data-hover="Turtles Catagory">Turtles Catagory</a></li>
+        <li><a href="Hikkaduwa.html" data-hover="Hikkaduwa">Hikkaduwa</a></li>
+        <li><a href="Threats.html" data-hover="Threats">Threats</a></li>
+        <li><a href="Other Turtle Hatcheries.html" data-hover="Other Turtle Hatcheries">Other Turtle Hatcheries</a></li>
+        <li><a href="Donation.html" data-hover="Donation">Donation</a></li>
+      </ul>
+      </header>
+
+
+
+
+<body>
+    <div class="cover">
+        <h1>Buy Tickets</h1>
+    </div>   
+                         
+                       
+                            <div class="container1">
+                            <div class="section">
+                              <h2>Dates</h2>
+                              <!-- Add date selection here -->
+                              <input type="date" id="reservation-date">
+                            </div>
+                            <div class="section2">
+                              <h2><center>Guests</center></h2>
+                              <div class="category">
+                                <label>Local Adult</label>
+                                <input type="number" id="slAdult" class="member" min="0" value="0">
+                              </div>
+                              <div class="category">
+                                <label>Local Child</label>
+                                <input type="number" id="slChild" class="member" min="0" value="0">
+                              </div>
+                              <div class="category">
+                                <label>Foreigner Adult</label>
+                                <input type="number" id="foreignerAdult" class="member" min="0" value="0">
+                              </div>
+                              <div class="category">
+                                <label>Foreigner Child</label>
+                                <input type="number" id="foreignerChild" class="member" min="0" value="0">
+                              </div>
+                              <div class="category">
+                                <label>Infant</label>
+                                <input type="number" id="infant" class="member" min="0" value="0">
+                              </div>
+                            </div>
+                          
+                          
+                          <div class="section">
+                            <h3 class="customfon">7.00am - 18.00pm every day
+                              
+                            <select id="time" >
+                             <option>07.00 am - 08.00 am</option>
+                              <option>08.00 am - 09.00 am</option>
+                              <option>09.00 am - 10.00 am</option>
+                              <option>10.00 am - 11.00 am (Peak)</option>
+                              <option>11.00 am - 12.00 pm (Peak)</option>
+                              <option>12.00 pm - 01.00 pm (Peak)</option>
+                              <option>02.00 pm - 03.00 pm</option>
+                              <option>03.00 pm - 04.00 pm (Peak)</option>
+                              <option>04.00 pm - 05.00 pm (Peak)</option>
+                              <option>05.00 pm - 06.00 pm (Peak)</option>
+                            </select>
+                          </div> 
+                        </div>
+                    </div>
+                      
+                        
+                        </div>
+                    </div>
+                        <br/>
+                        <br>
+                        <br>
+                        </div>
+                        <center><h2>Price Table</h2></center>
+                        <div class="price">
+                                <table style="border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd;">
+                            <tr>
+                              
+                            <th>Guests</th>
+                            <th>Time</th>
+                            <th>Price</th>
+                            </tr>
+
+                            <tr>
+                            <td>Foreigner Adult</td>
+                            <td>Normal</td>
+                            <td>$10</td>
+                            </tr>
+
+                            <tr>
+                            <td>Foreigner Adult</td>
+                            <td>Peak</td>
+                            <td>$13</td>
+                            </tr>
+
+                            <tr>
+                            <td>Foreigner Child</td>
+                            <td>Normal</td>
+                            <td>$5</td>
+                            </tr>
+
+                            <tr>
+                            <td>Foreigner Child</td>
+                            <td>Peak</td>
+                            <td>$8</td>
+                            </tr>
+
+                            <tr>
+                            <td>Local Adult</td>
+                            <td>Normal</td>
+                            <td>$4</td>
+                            </tr>
+
+                            <tr>
+                            <td>Local Adult</td>
+                            <td>Peak</td>
+                            <td>$6</td>
+                            </tr>
+
+                            <tr>
+                            <td>Local Child</td>
+                            <td>Normal</td>
+                            <td>$2</td>
+                            </tr>
+
+                            <tr>
+                            <td>Local Child</td>
+                            <td>Peak</td>
+                            <td>$3</td>
+                            </tr>
+
+                            </table>
+                        </div>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <div class="summary">
+                        <h2><center>Summary Table</center></h2>
+                        <p>Date: <span id="summary-date"></span></p>
+                        <p>Time Slot: <span id="summary-time-slot"></span></p>
+                        <p>Total Duration: <span id="summary-duration"></span></p>
+                        <p>Tickets Charges:</p>
+                        <ul id="summary-tickets"></ul>
+                        <p>Total Payable: <span id="summary-total"></span></p>
+                    </div>
+                   <br>
+                    <br>
+                        <br>
+                    <br>
+                    <div class="o">
+                     <center>
+                        <button id="submitBtn">Submit</button>
+                      <div id="output"></div>
+                      <br>
+                      <a href="file:///C:/Html%20pra%20co/Website/pic/Details.html">
+                        <button id="button">Continue</button>
+                      </a>
+                <script src="Ticketbook.js"></script>
+    
+
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+                <div class="wrapper">
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-facebook-f"></i>
+                     </div>
+                     <span>Facebook</span>
+                  </div>
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-twitter"></i>
+                     </div>
+                     <span>Twitter</span>
+                  </div>
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-instagram"></i>
+                     </div>
+                     <span>Instagram</span>
+                  </div>
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-linkedin"></i>
+                     </div>
+                     <span>linkedin</span>
+                  </div>
+                  <div class="button">
+                     <div class="icon">
+                        <i class="fab fa-youtube"></i>
+                     </div>
+                     <span>YouTube</span>
+                  </div>
+            
+
+
+
+
+    </html>
+        
