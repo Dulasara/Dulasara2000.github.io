@@ -1,0 +1,252 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.logo{
+    width: 100px;
+} 
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+}
+
+.confirmation-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.confirmation-heading {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.confirmation-details {
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.confirmation-details label {
+  font-weight: bold;
+}
+
+.confirmation-total {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.confirmation-message {
+  font-size: 18px;
+  margin-top: 20px;
+}
+table {
+width: 100%;
+border-collapse: collapse;
+border: 1px solid #ccc;
+margin-bottom: 20px;
+}
+
+td, th {
+padding: 8px;
+text-align: left;
+border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+background-color: #f2f2f2;
+}
+
+tr:first-child {
+font-weight: bold;
+background-color: #f7f7f7;
+}
+@media screen and (max-width: 600px) {
+  .confirmation-container {
+    padding: 10px;
+  }
+
+  .confirmation-heading {
+    font-size: 20px;
+  }
+
+  .confirmation-details label,
+  .confirmation-details span,
+  .confirmation-total label,
+  .confirmation-total span {
+    font-size: 14px;
+  }
+
+  .confirmation-message {
+    font-size: 16px;
+  }
+
+  table {
+    font-size: 12px;
+  }
+}
+
+
+.wrapper .button{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 5px;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover{
+  width: 200px;
+}
+.wrapper .button .icon{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  text-align: center;
+  border-radius: 50px;
+  box-sizing: border-box;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1):hover .icon{
+  background: #4267B2;
+}
+.wrapper .button:nth-child(2):hover .icon{
+  background: #1DA1F2;
+}
+.wrapper .button:nth-child(3):hover .icon{
+  background: #E1306C;
+}
+.wrapper .button:nth-child(4):hover .icon{
+  background: #1d0ee9;
+}
+.wrapper .button:nth-child(5):hover .icon{
+  background: #ff0000;
+}
+.wrapper .button .icon i{
+  font-size: 25px;
+  line-height: 60px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:hover .icon i{
+  color: #fff;
+}
+.wrapper .button span{
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 60px;
+  margin-left: 10px;
+  transition: all 0.3s ease-out;
+}
+.wrapper .button:nth-child(1) span{
+  color: #4267B2;
+}
+.wrapper .button:nth-child(2) span{
+  color: #1DA1F2;
+}
+.wrapper .button:nth-child(3) span{
+  color: #E1306C;
+}
+.wrapper .button:nth-child(4) span{
+  color: #181bd3;
+}
+.wrapper .button:nth-child(5) span{
+  color: #ff0000;
+}
+
+
+*{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0; padding: 0;
+  box-sizing: border-box;
+  outline: none; border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 1.2s linear;
+}
+
+
+body {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #212121;
+}
+
+html,body{
+display: grid;
+height: 100%;
+width: 100%;
+place-items: center;
+background: linear-gradient(315deg, #31771b 0%, #d7e1ec 74%);
+}
+
+.snip1143 {
+  font-family: 'Raleway', Arial, sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.snip1143 * {
+  box-sizing: border-box;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1143 li {
+  display: inline-block;
+  list-style: outside none none;
+  margin: 0 1.5em;
+  overflow: hidden;
+}
+.snip1143 a {
+  padding: 0.3em 0;
+  color: 
+  rgba(4, 2, 12, 0.5);
+  position: relative;
+  display: inline-block;
+  letter-spacing: 1px;
+  margin: 0;
+  text-decoration: none;
+}
+.snip1143 a:before,
+.snip1143 a:after {
+  position: absolute;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1143 a:before {
+  top: 100%;
+  display: block;
+  height: 3px;
+  width: 100%;
+  content: "";
+  background-color: #c0392b;
+}
+.snip1143 a:after {
+  padding: 0.3em 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  content: attr(data-hover);
+  color: rgb(51, 8, 167);
+  white-space: nowrap;
+}
+.snip1143 li:hover a,
+.snip1143 .current a {
+  transform: translateY(-100%);
+}
