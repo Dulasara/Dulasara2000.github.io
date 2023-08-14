@@ -1,0 +1,225 @@
+#detailsForm {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+    #registrationForm {
+        width: 90%; /* Adjust form width for smaller screens */
+    }
+    /* Align center for summary section */
+    .summaryf {
+        text-align: center;
+    }
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#detailsForm {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    height: 400px;
+    position: relative;
+    right: 150px;
+}
+.summaryt {
+max-width: 600px;
+margin: 0 auto;
+padding: 20px;
+background-color: #d70000;
+border: 1px solid #ccc;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.section {
+margin-top: 20px;
+padding: 20px;
+background-color: #fff;
+border: 1px solid #ccc;
+position: relative;
+left: 420px;
+bottom: 400px;
+}
+
+
+div {
+    margin-bottom: 40px;
+}
+
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    
+}
+table {
+width: 100%;
+border-collapse: collapse;
+margin-top: 20px;
+}
+
+th,
+td {
+padding: 10px;
+border: 1px solid #ddd;
+text-align: left;
+}
+
+tr:hover {
+background-color: #f2f2f2;
+}
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+select {
+    width: 90%;
+    padding: 10px;
+    border: 1px solid #4722cf;
+    border-radius: 4px;
+}
+.rF{
+    position: relative;
+    right: 150px;
+    color: #fff;
+    
+  }
+
+
+
+@media screen and (max-width: 600px) {
+    body {
+        background-image: none; /* Remove background image on smaller screens */
+        background-color: #e41c1c; /* Set a background color instead */
+    }
+
+    form {
+        max-width: 100%; /* Adjust form width to fit smaller screens */
+    }
+
+    select {
+        background-image: none; /* Remove custom dropdown arrow image on smaller screens */
+    }
+}
+#table{
+  position: relative;
+  right: -10px;
+}
+#buttonsub {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+.inputcontainer {
+display: flex;
+align-items: center;
+margin-bottom: 10px;
+position: relative;
+top: 30px;
+}
+
+.inputcontainer label {
+margin-right: 10px;
+font-weight: bold;
+}
+
+.inputcontainer input {
+padding: 5px;
+border: 1px solid #ccc;
+border-radius: 5px;
+font-size: 14px;
+position: relative;
+bottom: 20px;
+}
+
+
+.wrapper .button{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover{
+    width: 200px;
+  }
+  .wrapper .button .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1):hover .icon{
+    background: #4267B2;
+  }
+  .wrapper .button:nth-child(2):hover .icon{
+    background: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3):hover .icon{
+    background: #E1306C;
+  }
+  .wrapper .button:nth-child(4):hover .icon{
+    background: #1d0ee9;
+  }
+  .wrapper .button:nth-child(5):hover .icon{
+    background: #ff0000;
+  }
+  .wrapper .button .icon i{
+    font-size: 25px;
+    line-height: 60px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:hover .icon i{
+    color: #fff;
+  }
+  .wrapper .button span{
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all 0.3s ease-out;
+  }
+  .wrapper .button:nth-child(1) span{
+    color: #4267B2;
+  }
+  .wrapper .button:nth-child(2) span{
+    color: #1DA1F2;
+  }
+  .wrapper .button:nth-child(3) span{
+    color: #E1306C;
+  }
+  .wrapper .button:nth-child(4) span{
+    color: #181bd3;
+  }
+  .wrapper .button:nth-child(5) span{
+    color: #ff0000;
+  }
+  
+  

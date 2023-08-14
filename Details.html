@@ -1,0 +1,297 @@
+<html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Details Form</title>
+  <link rel="stylesheet" type="text/css" href="payment.css">
+  
+ 
+    <img src="Logo.png" class="logo">
+    <header class="header">
+      <ul class="snip1143">
+        <li><a href="index.html" data-hover="Home">Home</a></li>
+        <li><a href="catagory.html" data-hover="Turtles Catagory">Turtles Catagory</a></li>
+        <li><a href="Hikkaduwa.html" data-hover="Hikkaduwa">Hikkaduwa</a></li>
+        <li><a href="Threats.html" data-hover="Threats">Threats</a></li>
+        <li><a href="Other Turtle Hatcheries.html" data-hover="Other Turtle Hatcheries">Other Turtle Hatcheries</a></li>
+        <li><a href="Donation.html" data-hover="Donation">Donation</a></li>
+      </ul>
+      </header>
+  
+    
+    <link rel="stylesheet" href="./Details.css">
+<body>
+   
+    <form id="detailsForm">
+        <div>
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="confirmEmail">Confirm Email:</label>
+            <input type="email" id="confirmEmail" name="confirmEmail" required>
+        </div>
+       
+      </div>
+      <div class="inputcontainer">
+        <label for="phone-number">Phone Number:</label>
+        <br>
+        <input id="phone" type="tel" name="phone" />
+      </div>
+        </div>
+        <form  class="summaryt">
+        <div class="section">
+            <h2 class="subheading">Summary</h2>
+            <table id="table">
+              <tr>
+                <td>Category</td>
+                <td>Quantity</td>
+                <td>Price</td>
+              </tr>
+              <tr>
+                <td>Foreigner Adult</td>
+                <td id="summaryForeignerAdult"></td>
+                <td id="priceForeignerAdult">$</td>
+              </tr>
+              <tr>
+                <td>Foreigner Child</td>
+                <td id="summaryForeignerChild"></td>
+                <td id="priceForeignerChild">$</td>
+              </tr>
+              <tr>
+                <td>SL Adult</td>
+                <td id="slAdultTickets"></td>
+                <td id="priceSLAdult">$</td>
+              </tr>
+              <tr>
+                <td>SL Child</td>
+                <td id="summarySLChild"></td>
+                <td id="priceSLChild">$</td>
+              </tr>
+              <tr>
+                <td colspan="1">Infant</td>
+                <td>(Free)</td>
+              </tr>
+              <tr>
+                <td>Date </td>
+                <td id="date"></td>
+              </tr>
+              <tr>
+                <td>Total Payable</td>
+                <td id ="seetotal"></td>
+              </tr>
+            </table>
+          </div>
+        <div>
+        
+          <a href="file:///C:/Html%20pra%20co/Website/pic/payment.html">
+            <button id="buttonsub">Submit</button>
+          </a>
+          
+        </div>
+      </form>
+    </form>
+
+
+
+
+
+
+
+
+    <script src="Details.js">
+
+      // Function to save data to local storage
+function saveToLocalStorage() {
+const fullName = document.getElementById('fullName').value;
+const email = document.getElementById('email').value;
+const confirmEmail = document.getElementById('confirmEmail').value;
+const phone = document.getElementById('phone').value;
+
+localStorage.setItem('fullName', fullName);
+localStorage.setItem('email', email);
+localStorage.setItem('confirmEmail', confirmEmail);
+localStorage.setItem('phone', phone);
+}
+
+// Call the function when saving is triggered (e.g., button click)
+// Make sure to attach this event to your button element
+// For example: <button id="saveButton">Save</button>
+document.getElementById('submitBtn').addEventListener('click', saveToLocalStorage);
+
+    
+      const phoneInputField = document.querySelector("#phone");
+const phoneInput = window.intlTelInput(phoneInputField, {
+utilsScript:
+ "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+});
+document.addEventListener("DOMContentLoaded", function() {
+      const cardNumberInput = document.getElementById("cardNumber");
+      const cvvInput = document.getElementById("cvv");
+
+      // Hide the CVV input initially
+      cvvInput.style.display = "none";
+
+      // Add an event listener to the card number input for input changes
+      cardNumberInput.addEventListener("input", function() {
+          const cardNumber = cardNumberInput.value.replace(/\D/g, '');
+
+          // Check if the card number has a length of 12 digits
+          if (cardNumber.length === 12) {
+              cvvInput.style.display = "block"; // Show the CVV input
+          } else {
+              cvvInput.style.display = "none";  // Hide the CVV input
+          }
+      });
+
+      const form = document.getElementById("paymentForm");
+
+// Add an event listener to the form for submission
+form.addEventListener("submit", function(event) {
+event.preventDefault(); // Prevent form submission
+
+// Get form inputs
+const expirationMonthSelect = document.getElementById("expirationMonth");
+const expirationDaySelect = document.getElementById("expirationDay");
+const cardHolderNameInput = document.getElementById("cardHolderName");
+
+// Create an object to store form input values
+const paymentData = {
+  cardNumber: cardNumberInput.value,
+  expirationMonth: expirationMonthSelect.value,
+  expirationDay: expirationDaySelect.value,
+  cvv: cvvInput.value,
+  cardHolderName: cardHolderNameInput.value
+};
+  let form = document.getElementById('detailsForm');
+
+  form.addEventListener('submit', function (event) {
+      event.preventDefault(); // Prevent form submission for now
+
+      // Validate the form inputs
+      if (!fullNameInput.value.trim()) {
+          showError('Full Name is required.');
+          return;
+      }
+
+      if (!mobileNumberInput.value.trim()) {
+           showError('Mobile Number is required.');
+        return;
+      }
+
+      if (!emailInput.value.trim()) {
+           showError('Email is required.');
+          return;
+      }
+
+      if (emailInput.value !== confirmEmailInput.value) {
+          showError('Email and Confirm Email do not match.');
+          return;
+      }
+
+          // If gender is not selected, set it to null
+          const gender = genderInput.value || null;
+
+          // Form data is valid, handle form submission or other actions here
+          // For this example, let's just show a success message
+          showSuccess('Registration successful!');
+          });
+
+          localStorage.setItem("cardNumber", paymentData.cardNumber);
+          localStorage.setItem("expirationMonth", paymentData.expirationMonth);
+          localStorage.setItem("expirationDay", paymentData.expirationDay);
+          localStorage.setItem("cvv", paymentData.cvv);
+          localStorage.setItem("cardHolderName", paymentData.cardHolderName);
+
+          // Redirect to confirmation page
+          window.location.href = "file:///C:/Html%20pra%20co/Website/pic/confirm.html";
+      });
+  });
+
+  document.addEventListener('DOMContentLoaded', function () {
+      const ticketData = localStorage.getItem('ticketData');
+      const reservationDate = localStorage.getItem('reservationDate');
+      const timeSlot = localStorage.getItem('timeSlot');
+      let totalPayable = localStorage.getItem('totalPayable');
+      
+   const date=document.getElementById('date');
+    date.innerHTML=reservationDate;
+
+    
+
+     const seetotal=document.getElementById('seetotal');
+     seetotal.innerHTML=totalPayable;
+
+     const slAdult = localStorage.getItem('AdultTickets');
+     console.log(slAdult);
+     
+  });
+
+  const slAdultTickets = localStorage.getItem('slAdultTickets');
+  document.getElementById('slAdultTickets').innerHTML = slAdultTickets;
+  const slAdultTotal = localStorage.getItem('slAdultTotal');
+  document.getElementById('priceSLAdult').textContent =slAdultTotal;
+  // 
+  const slChildTickets= localStorage.getItem('slChildTickets');
+  document.getElementById('summarySLChild').textContent = slChildTickets;
+  const slChildTotal = localStorage.getItem('slChildTotal');
+  document.getElementById('priceSLChild').textContent =slChildTotal;
+  //
+  const foreignerAdultTickets = localStorage.getItem('foreignerAdultTickets');
+  document.getElementById('summaryForeignerAdult').textContent =foreignerAdultTickets;
+  const foreignerAdultTotal = localStorage.getItem('foreignerAdultTotal');
+  document.getElementById('priceForeignerAdult').textContent =foreignerAdultTotal;
+  //
+  const foreignerChildTickets= localStorage.getItem('foreignerChildTickets');
+  document.getElementById('summaryForeignerChild').textContent =foreignerChildTickets;
+  const foreignerChildTotal = localStorage.getItem('foreignerChildTotal');
+  document.getElementById('priceForeignerChild').textContent =foreignerChildTotal;
+  //
+   
+  //
+  
+  
+</script>
+    
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <div class="wrapper">
+      <div class="button">
+         <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+         </div>
+         <span>Facebook</span>
+      </div>
+      <div class="button">
+         <div class="icon">
+            <i class="fab fa-twitter"></i>
+         </div>
+         <span>Twitter</span>
+      </div>
+      <div class="button">
+         <div class="icon">
+            <i class="fab fa-instagram"></i>
+         </div>
+         <span>Instagram</span>
+      </div>
+      <div class="button">
+         <div class="icon">
+            <i class="fab fa-linkedin"></i>
+         </div>
+         <span>linkedin</span>
+      </div>
+      <div class="button">
+         <div class="icon">
+            <i class="fab fa-youtube"></i>
+         </div>
+         <span>YouTube</span>
+      </div>
+  
+</body>
+</head> 
+</html>
+
