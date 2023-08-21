@@ -36,7 +36,7 @@
 }
   .snip1143 a {
     padding: 0.3em 0;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(17, 9, 9, 0.5);
     position: relative;
     display: inline-block;
     letter-spacing: 1px;
@@ -180,7 +180,7 @@ nav a:hover{
     height: 100%;
     width: 100%;
     place-items: center;
-    background: linear-gradient(315deg, #31771b 0%, #d7e1ec 74%);
+    background: linear-gradient(315deg, #31771b 0%, #beecbc 74%);
 }
 
   .wrapper .button{
@@ -407,6 +407,21 @@ li {
     height: auto;
     object-fit: cover;
 }
+
+@media screen and (max-width:600px){
+    header{
+      font-size: 90%;
+      padding: 0px;
+      overflow: scroll;
+    }
+    header ul li a {
+      font-size: 2em;
+      padding: 0px;
+      border: none;
+    }
+}
+  
+
 .ticket-button {
     display: flex;
     align-items: center;
@@ -430,20 +445,6 @@ li {
     color: #fff;
     background-color: #333;
   }
-
-
-@media screen and (max-width:600px){
-    header{
-      font-size: 90%;
-      padding: 0px;
-      overflow: scroll;
-    }
-    header ul li a {
-      font-size: 2em;
-      padding: 0px;
-      border: none;
-    }
-}
 
 
 
